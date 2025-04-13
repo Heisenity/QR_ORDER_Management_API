@@ -121,7 +121,7 @@ app.delete("/api/tables", async (req, res) => {
 
 // Testing
 app.get("/", (req, res) => {
-  res.send("🎉 QR Order Management API is Live!");
+  res.send("🎉 Smart QR Order Management API is Live!");
 });
 
 
