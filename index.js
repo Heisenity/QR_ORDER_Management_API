@@ -107,6 +107,11 @@ app.delete("/api/tables", async (req, res) => {
   }
 });
 
+// Testing
+app.get("/", (req, res) => {
+  res.send("🎉 QR Order Management API is Live!");
+});
+
 // ✅ Create HTTP server and attach Socket.IO
 const server = http.createServer(app);
 const io = socketIO(server, { cors: { origin: "*", methods: ["GET", "POST"] } });
