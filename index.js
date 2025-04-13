@@ -6,6 +6,8 @@ const path = require("path");
 const http = require("http");
 const socketIO = require("socket.io");
 const bodyParser = require("body-parser");
+const rateLimit = require("express-rate-limit");
+
 
 
 // Import Routes
@@ -24,6 +26,15 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+
+// ✅ Rate Limiter setup
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 mins
+  max: 100, // Limit each IP to 100 requests per windowMs
+});
+app.use("/api", limiter);
+
 
 app.use("/qrCodes", express.static(path.join(__dirname, "/images")));
 app.use("/api/inventory", inventoryRoutes);
@@ -55,6 +66,7 @@ const getUserIP = (req) => {
     req.headers["x-forwarded-for"]?.split(",")[0] || req.connection?.remoteAddress || "Unknown"
   );
 };
+
 
 // ✅ API Endpoint to store user data in QrCode model
 app.post("/api/save-user", async (req, res) => {
@@ -111,6 +123,7 @@ app.delete("/api/tables", async (req, res) => {
 app.get("/", (req, res) => {
   res.send("🎉 QR Order Management API is Live!");
 });
+
 
 // ✅ Create HTTP server and attach Socket.IO
 const server = http.createServer(app);
