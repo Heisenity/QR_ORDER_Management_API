@@ -42,8 +42,11 @@ Tech Stack
 ✅Installation:
 
 git clone https://github.com/yourusername/qr-management-api.git
+
 cd qr-management-api
+
 npm install
+
 npm start
 
 
