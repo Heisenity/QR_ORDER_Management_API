@@ -41,7 +41,7 @@ Tech Stack
 
 ✅Installation:
 
-git clone https://github.com/yourusername/qr-management-api.git
+git clone https://github.com/Heisenity/qr-management-api.git
 
 cd qr-management-api
 
