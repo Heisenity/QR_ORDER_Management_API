@@ -13,15 +13,34 @@ This is a Node.js-based backend for managing QR codes, user authentication, and 
 ## Live API (Hosted on Render)
 Link: https://qr-order-management-api.onrender.com
 
-API Endpoints:
+Sure! Here's a clean and readable way to present your API endpoints in a GitHub README:
 
-Method  	Endpoint	           Description
-POST	 | /api/register	    |  Register new user
-POST	 | /api/login	Login   |  with email/password
-POST	 | /api/verify-otp	  |  Verify OTP for registration
-POST	 | /api/qr/create	    |  Create QR (auth required)
-GET	   | /api/qr/:id/visits |  Get QR visit stats (admin)
-GET	   | /api/user/me	      |  Get logged-in user info
+---
+📡 API Endpoints
+
+🔐 Authentication
+
+| Method | Endpoint         | Description                        |
+|--------|------------------|------------------------------------|
+| POST   | `/api/register`  | Register a new user                |
+| POST   | `/api/login`     | Login with email and password      |
+| POST   | `/api/verify-otp`| Verify OTP for registration        |
+
+📲 QR Code
+
+| Method | Endpoint           | Description                         |
+|--------|--------------------|-------------------------------------|
+| POST   | `/api/qr/create`   | Create a QR code (authentication required) |
+| GET    | `/api/qr/:id/visits` | Get QR code visit stats (admin only) |
+
+👤 User
+
+| Method | Endpoint       | Description               |
+|--------|----------------|---------------------------|
+| GET    | `/api/user/me` | Get information of the logged-in user |
+
+
+Let me know if you’d like to add example requests/responses too!
 
 
 Tech Stack
