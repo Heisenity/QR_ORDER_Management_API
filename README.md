@@ -13,9 +13,7 @@ This is a Node.js-based backend for managing QR codes, user authentication, and 
 ## Live API (Hosted on Render)
 Link: https://qr-order-management-api.onrender.com
 
-Sure! Here's a clean and readable way to present your API endpoints in a GitHub README:
 
----
 📡 API Endpoints
 
 🔐 Authentication
@@ -40,7 +38,7 @@ Sure! Here's a clean and readable way to present your API endpoints in a GitHub 
 | GET    | `/api/user/me` | Get information of the logged-in user |
 
 
-Let me know if you’d like to add example requests/responses too!
+
 
 
 Tech Stack
@@ -58,7 +56,7 @@ Tech Stack
 6. bcrypt (for password hashing)
 
 
-✅Installation:
+Installation:
 
 git clone https://github.com/Heisenity/qr-management-api.git
 
